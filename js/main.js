@@ -453,7 +453,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (verifyData.success) {
                 console.log("Payment successful according to backend.");
-                await postPaymentSuccess(cf_order_id, formDetails, formElement);
+                await postPaymentSuccess(cf_order_id, formDetails, formElement, verifyData);
             } else {
                 console.warn("Payment verification failed.", verifyData.message || "Unknown error");
                 openStatusModal('failed', verifyData.message || 'Payment verification failed.');
@@ -465,53 +465,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Auto registration and login after payment success
-    async function postPaymentSuccess(cfOrderId, formDetails, formElement) {
-        openStatusModal('processing', 'Creating your account...');
-        try {
-            const regRes = await fetch(`${API_BASE}/api/users/create_student/`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    full_name: formDetails.name,
-                    email: formDetails.email,
-                    city: formDetails.city,
-                    state: formDetails.state,
-                    country: "India",
-                    phone1: formDetails.phone,
-                })
+    async function postPaymentSuccess(cfOrderId, formDetails, formElement, verifyData) {
+        openStatusModal('success', 'Payment successful!', cfOrderId);
+        if (formElement) {
+            formElement.reset();
+            formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
+                el.classList.remove('is-invalid', 'referral-verified');
+                el.readOnly = false;
             });
-            const regData = await regRes.json();
-
-            if (regData.success && regData.data?.password) {
-                await autoLogin(formDetails.email, regData.data.password, cfOrderId, formElement);
-            } else {
-                openStatusModal('success', '', cfOrderId);
-                if (formElement) {
-                    formElement.reset();
-                    formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
-                        el.classList.remove('is-invalid', 'referral-verified');
-                        el.readOnly = false;
-                    });
-                    formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
-                        el.style.display = 'none';
-                        el.textContent = '';
-                    });
-                }
-            }
-        } catch (err) {
-            console.error("Student creation failed:", err);
-            openStatusModal('success', '', cfOrderId);
-            if (formElement) {
-                formElement.reset();
-                formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
-                    el.classList.remove('is-invalid', 'referral-verified');
-                    el.readOnly = false;
-                });
-                formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
-                    el.style.display = 'none';
-                    el.textContent = '';
-                });
-            }
+            formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
+                el.style.display = 'none';
+                el.textContent = '';
+            });
         }
     }
 
@@ -564,6 +529,41 @@ document.addEventListener("DOMContentLoaded", function () {
         const parts = value.split(`; ${name}=`);
         if (parts.length === 2) return parts.pop().split(';').shift();
         return '';
+    }
+
+    function getTrackingParams() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const trackingKeys = [
+            'utm_medium',
+            'utm_source',
+            'utm_campaign',
+            'utm_content',
+            'fbc_id',
+            'utm_adname',
+            'campaign_id',
+            'adset_id',
+            'fbclid',
+            'ad_source',
+            'ad_id',
+            'utm_adgroupid',
+            'utm_creativeid',
+            'utm_matchtype',
+            'utm_device',
+            'utm_network',
+            'utm_keyword',
+            'gad_source',
+            'gad_campaignid',
+            'gbraid',
+            'gclid'
+        ];
+        const params = {};
+        trackingKeys.forEach(key => {
+            const val = urlParams.get(key) || getCookie(key);
+            if (val) {
+                params[key] = val;
+            }
+        });
+        return params;
     }
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -685,8 +685,8 @@ document.addEventListener("DOMContentLoaded", function () {
             if (err) { err.textContent = ''; err.style.display = 'none'; }
             refInput.classList.remove('is-invalid');
 
-            // Make it mandatory for hero form (referred by mandatory constraint)
-            const isMandatory = refInput.hasAttribute('required') || form.classList.contains('apply-form');
+            // Make it mandatory only if it has a required attribute
+            const isMandatory = refInput.hasAttribute('required');
             if (isMandatory && !val) {
                 refInput.classList.add('is-invalid');
                 if (err) { err.textContent = "Referred by is required"; err.style.display = 'block'; }
@@ -734,23 +734,23 @@ document.addEventListener("DOMContentLoaded", function () {
             const formDetails = { name: fullName, email, phone, state, city, university, referredBy };
 
             // 1. Pre-validation check email
-            try {
-                const checkRes = await fetch(`${API_BASE}/api/users/check_email/`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email })
-                });
-                const checkData = await checkRes.json();
+            // try {
+            //     const checkRes = await fetch(`${API_BASE}/api/users/check_email/`, {
+            //         method: 'POST',
+            //         headers: { 'Content-Type': 'application/json' },
+            //         body: JSON.stringify({ email: email })
+            //     });
+            //     const checkData = await checkRes.json();
 
-                if (checkData.data?.isExist) {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalText;
-                    alert('An account with this email address already exists. Please log in or reset your password.');
-                    return;
-                }
-            } catch (err) {
-                console.warn('Check email lookup ignored/skipped:', err);
-            }
+            //     if (checkData.data?.isExist) {
+            //         submitBtn.disabled = false;
+            //         submitBtn.textContent = originalText;
+            //         alert('An account with this email address already exists. Please log in or reset your password.');
+            //         return;
+            //     }
+            // } catch (err) {
+            //     console.warn('Check email lookup ignored/skipped:', err);
+            // }
 
             // 2. Submit dossier data (source 18, program 2)
             try {
@@ -768,6 +768,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     utm_source: utmSource,
                     utm_medium: utmMedium,
                     utm_campaign: utmCampaign,
+                    ...getTrackingParams()
                 };
 
                 const response = await fetch(`${API_BASE}/api/career/createdossierform`, {
@@ -797,7 +798,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             action: 'pay_now_clicked',
                             utm_source: utmSource,
                             utm_medium: utmMedium,
-                            utm_campaign: utmCampaign
+                            utm_campaign: utmCampaign,
+                            ...getTrackingParams()
                         })
                     }).catch(() => { });
 
@@ -918,26 +920,26 @@ document.addEventListener("DOMContentLoaded", function () {
             const formDetails = { name: fullName, email, phone, state, city, university, referredBy: refferedBy };
 
             // 1. Check Email
-            try {
-                const checkRes = await fetch(`${API_BASE}/api/users/check_email/`, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email: email })
-                });
-                const checkData = await checkRes.json();
+            // try {
+            //     const checkRes = await fetch(`${API_BASE}/api/users/check_email/`, {
+            //         method: 'POST',
+            //         headers: { 'Content-Type': 'application/json' },
+            //         body: JSON.stringify({ email: email })
+            //     });
+            //     const checkData = await checkRes.json();
 
-                if (checkData.data?.isExist) {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = originalText;
+            //     if (checkData.data?.isExist) {
+            //         submitBtn.disabled = false;
+            //         submitBtn.textContent = originalText;
 
-                    const activeModalEl = form.closest('.modal');
-                    const activeModal = bootstrap.Modal.getInstance(activeModalEl);
-                    if (activeModal) activeModal.hide();
+            //         const activeModalEl = form.closest('.modal');
+            //         const activeModal = bootstrap.Modal.getInstance(activeModalEl);
+            //         if (activeModal) activeModal.hide();
 
-                    alert('An account with this email address already exists. Please log in or reset your password.');
-                    return;
-                }
-            } catch (err) { }
+            //         alert('An account with this email address already exists. Please log in or reset your password.');
+            //         return;
+            //     }
+            // } catch (err) { }
 
             // 2. Submit dossier data (source 1, program mapped)
             try {
@@ -955,6 +957,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     utm_source: utmSource,
                     utm_medium: utmMedium,
                     utm_campaign: utmCampaign,
+                    ...getTrackingParams()
                 };
 
                 if (isReferralApplied) {
@@ -988,7 +991,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             action: 'pay_now_clicked',
                             utm_source: utmSource,
                             utm_medium: utmMedium,
-                            utm_campaign: utmCampaign
+                            utm_campaign: utmCampaign,
+                            ...getTrackingParams()
                         })
                     }).catch(() => { });
 
