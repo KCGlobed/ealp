@@ -1,10 +1,12 @@
 // Standalone Static Website Main JavaScript file
-// const API_BASE = window.location.origin.includes('localhost') || window.location.origin.includes('127.0.0.1')
-//     ? 'https://www.gccschool.com'
-//     : window.location.origin;
 
-// API_BASE = https://gccwebsite-admin-prod-backend-738131651355.asia-south1.run.app
-API_BASE = "https://gccwebsite-admin-backend-738131651355.asia-south1.run.app"
+// var BASE_URL = "https://gcc-website-prod-932479078084.europe-west1.run.app";
+var BASE_URL = "https://kcglobed-gcc-website-932479078084.asia-south1.run.app";
+// var mode = "production";
+// var GCC_BACKEND_URL = "https://gccwebsite-admin-prod-backend-738131651355.asia-south1.run.app"
+var GCC_BACKEND_URL = "https://gccwebsite-admin-backend-738131651355.asia-south1.run.app"
+var mode = "sandbox"
+var API_BASE = GCC_BACKEND_URL;
 
 document.addEventListener("DOMContentLoaded", function () {
     // ----------------------------------------------------
@@ -125,25 +127,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // ----------------------------------------------------
     // 5. Go Top Button
     // ----------------------------------------------------
-    const goTopBtn = document.createElement('div');
-    goTopBtn.className = 'go-top';
-    goTopBtn.innerHTML = '<i class="ti ti-chevron-up"></i>';
-    document.body.appendChild(goTopBtn);
+    // const goTopBtn = document.createElement('div');
+    // goTopBtn.className = 'go-top';
+    // goTopBtn.innerHTML = '<i class="ti ti-chevron-up"></i>';
+    // document.body.appendChild(goTopBtn);
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 600) {
-            goTopBtn.classList.add('active');
-        } else {
-            goTopBtn.classList.remove('active');
-        }
-    });
+    // window.addEventListener('scroll', function () {
+    //     if (window.scrollY > 600) {
+    //         goTopBtn.classList.add('active');
+    //     } else {
+    //         goTopBtn.classList.remove('active');
+    //     }
+    // });
 
-    goTopBtn.addEventListener('click', function () {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+    // goTopBtn.addEventListener('click', function () {
+    //     window.scrollTo({
+    //         top: 0,
+    //         behavior: 'smooth'
+    //     });
+    // });
 
     // ----------------------------------------------------
     // 6. State & City Datasets Loading
@@ -430,8 +432,40 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     };
 
+    // Verification logic with delay and status tracking
+    async function verifyPayment(cf_order_id, formDetails, formElement) {
+        console.log("Triggering /api/complete-payment for cf_order_id:", cf_order_id);
+        openStatusModal('processing', 'Verifying payment...');
+
+        try {
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            const verifyRes = await fetch(`${BASE_URL}/api/complete-payment`, {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    cf_order_id: cf_order_id,
+                    re_attempt_status: false,
+                }),
+            });
+
+            const verifyData = await verifyRes.json();
+            console.log("complete-payment response:", verifyData);
+
+            if (verifyData.success) {
+                console.log("Payment successful according to backend.");
+                await postPaymentSuccess(cf_order_id, formDetails, formElement);
+            } else {
+                console.warn("Payment verification failed.", verifyData.message || "Unknown error");
+                openStatusModal('failed', verifyData.message || 'Payment verification failed.');
+            }
+        } catch (err) {
+            console.error("complete-payment error:", err);
+            openStatusModal('failed', 'Network error during verification.');
+        }
+    }
+
     // Auto registration and login after payment success
-    async function postPaymentSuccess(cfOrderId, formDetails) {
+    async function postPaymentSuccess(cfOrderId, formDetails, formElement) {
         openStatusModal('processing', 'Creating your account...');
         try {
             const regRes = await fetch(`${API_BASE}/api/users/create_student/`, {
@@ -449,62 +483,80 @@ document.addEventListener("DOMContentLoaded", function () {
             const regData = await regRes.json();
 
             if (regData.success && regData.data?.password) {
-                await autoLogin(formDetails.email, regData.data.password, cfOrderId);
+                await autoLogin(formDetails.email, regData.data.password, cfOrderId, formElement);
             } else {
                 openStatusModal('success', '', cfOrderId);
-                setTimeout(() => {
-                    window.location.href = '/myaccount';
-                }, 3000);
+                if (formElement) {
+                    formElement.reset();
+                    formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
+                        el.classList.remove('is-invalid', 'referral-verified');
+                        el.readOnly = false;
+                    });
+                    formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
+                        el.style.display = 'none';
+                        el.textContent = '';
+                    });
+                }
             }
         } catch (err) {
             console.error("Student creation failed:", err);
             openStatusModal('success', '', cfOrderId);
-            setTimeout(() => {
-                window.location.href = '/myaccount';
-            }, 3000);
-        }
-    }
-
-    async function autoLogin(email, password, cfOrderId) {
-        openStatusModal('processing', 'Signing you in...');
-        try {
-            const loginRes = await fetch(`${API_BASE}/api/users/website_login/`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    email: email,
-                    password: password,
-                    role: 'student'
-                })
-            });
-            const loginData = await loginRes.json();
-
-            if (loginData.data?.token) {
-                // Save tokens to localStorage/cookies if needed
-                localStorage.setItem('auth_access', loginData.data.token.access);
-                localStorage.setItem('auth_refresh', loginData.data.token.refresh);
-
-                openStatusModal('success', '', cfOrderId);
-                const msgEl = document.querySelector('.status-success .text-muted');
-                if (msgEl) msgEl.textContent = 'Successfully registered! Redirecting to profile...';
-
-                setTimeout(() => {
-                    window.location.href = '/myaccount';
-                }, 3000);
-            } else {
-                openStatusModal('success', '', cfOrderId);
-                setTimeout(() => {
-                    window.location.href = '/myaccount';
-                }, 3000);
+            if (formElement) {
+                formElement.reset();
+                formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
+                    el.classList.remove('is-invalid', 'referral-verified');
+                    el.readOnly = false;
+                });
+                formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
+                    el.style.display = 'none';
+                    el.textContent = '';
+                });
             }
-        } catch (err) {
-            console.error("Auto login failed:", err);
-            openStatusModal('success', '', cfOrderId);
-            setTimeout(() => {
-                window.location.href = '/myaccount';
-            }, 3000);
         }
     }
+
+    // async function autoLogin(email, password, cfOrderId, formElement) {
+    //     openStatusModal('processing', 'Signing you in...');
+    //     try {
+    //         const loginRes = await fetch(`${API_BASE}/api/users/website_login/`, {
+    //             method: 'POST',
+    //             headers: { 'Content-Type': 'application/json' },
+    //             body: JSON.stringify({
+    //                 email: email,
+    //                 password: password,
+    //                 role: 'student'
+    //             })
+    //         });
+    //         const loginData = await loginRes.json();
+
+    //         if (loginData.data?.token) {
+    //             // Save tokens to localStorage/cookies if needed
+    //             localStorage.setItem('auth_access', loginData.data.token.access);
+    //             localStorage.setItem('auth_refresh', loginData.data.token.refresh);
+
+    //             openStatusModal('success', '', cfOrderId);
+    //             const msgEl = document.querySelector('.status-success .text-muted');
+    //             if (msgEl) msgEl.textContent = 'Successfully registered!';
+    //         } else {
+    //             openStatusModal('success', '', cfOrderId);
+    //         }
+    //     } catch (err) {
+    //         console.error("Auto login failed:", err);
+    //         openStatusModal('success', '', cfOrderId);
+    //     } finally {
+    //         if (formElement) {
+    //             formElement.reset();
+    //             formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
+    //                 el.classList.remove('is-invalid', 'referral-verified');
+    //                 el.readOnly = false;
+    //             });
+    //             formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
+    //                 el.style.display = 'none';
+    //                 el.textContent = '';
+    //             });
+    //         }
+    //     }
+    // }
 
     // Capture UTM params
     function getCookie(name) {
@@ -729,7 +781,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const formId = dossierData.data.id;
 
                     // Trigger Lead saved logging
-                    fetch(`${API_BASE}/api/save-lead`, {
+                    fetch(`${BASE_URL}/api/save-lead`, {
                         method: "POST",
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
@@ -753,7 +805,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     openStatusModal('processing', 'Initializing payment...');
 
                     // 4. Call /api/start-payment
-                    const startRes = await fetch(`${API_BASE}/api/start-payment`, {
+                    const startRes = await fetch(`${BASE_URL}/api/start-payment`, {
                         method: "POST",
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
@@ -797,35 +849,26 @@ document.addEventListener("DOMContentLoaded", function () {
                         if (result.error) {
                             openStatusModal('failed', result.error?.message || 'Payment failed');
                             // Report failure in background
-                            fetch(`${API_BASE}/api/report-payment-failure`, {
+                            fetch(`${BASE_URL}/api/report-payment-failure`, {
                                 method: "POST",
                                 headers: { 'Content-Type': 'application/json' },
                                 body: JSON.stringify({
                                     cf_order_id: startData.cf_order_id,
                                     cf_payment_id: result.error?.payment_id || null,
+                                    re_attempt_status: false,
                                     error_code: result.error?.code,
                                     error_description: result.error?.message,
                                     error_source: result.error?.source
                                 })
                             }).catch(() => { });
                         } else if (result.paymentDetails) {
-                            openStatusModal('processing', 'Verifying payment...');
-                            try {
-                                const verifyRes = await fetch(`${API_BASE}/api/complete-payment`, {
-                                    method: "POST",
-                                    headers: { 'Content-Type': 'application/json' },
-                                    body: JSON.stringify({ cf_order_id: startData.cf_order_id })
-                                });
-                                const verifyData = await verifyRes.json();
-
-                                if (verifyData.success) {
-                                    await postPaymentSuccess(startData.cf_order_id, formDetails);
-                                } else {
-                                    openStatusModal('failed', 'Verification failed');
-                                }
-                            } catch (e) {
-                                openStatusModal('failed', 'Verification failed');
-                            }
+                            console.log("Cashfree checkout success (via result object):", result.paymentDetails);
+                            verifyPayment(startData.cf_order_id, formDetails, heroApplyForm);
+                        } else if (result.redirect) {
+                            console.log("Cashfree checkout redirecting...");
+                        } else {
+                            console.log("Cashfree checkout finished without specific result. Verifying order status...");
+                            verifyPayment(startData.cf_order_id, formDetails, heroApplyForm);
                         }
                     });
 
@@ -928,8 +971,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (dossierData.success) {
                     const formId = dossierData.data.id;
 
-                    // Lead saved tracking
-                    fetch(`${API_BASE}/api/save-lead`, {
+                    // Trigger Lead saved logging
+                    fetch(`${BASE_URL}/api/save-lead`, {
                         method: "POST",
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({
@@ -959,7 +1002,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         // Regular flow: trigger payment
                         openStatusModal('processing', 'Initializing payment...');
 
-                        const startRes = await fetch(`${API_BASE}/api/start-payment`, {
+                        const startRes = await fetch(`${BASE_URL}/api/start-payment`, {
                             method: "POST",
                             headers: { 'Content-Type': 'application/json' },
                             body: JSON.stringify({
@@ -997,24 +1040,27 @@ document.addEventListener("DOMContentLoaded", function () {
                         }).then(async (result) => {
                             if (result.error) {
                                 openStatusModal('failed', result.error?.message || 'Payment failed');
+                                // Report failure in background
+                                fetch(`${BASE_URL}/api/report-payment-failure`, {
+                                    method: "POST",
+                                    headers: { 'Content-Type': 'application/json' },
+                                    body: JSON.stringify({
+                                        cf_order_id: startData.cf_order_id,
+                                        cf_payment_id: result.error?.payment_id || null,
+                                        re_attempt_status: false,
+                                        error_code: result.error?.code,
+                                        error_description: result.error?.message,
+                                        error_source: result.error?.source
+                                    })
+                                }).catch(() => { });
                             } else if (result.paymentDetails) {
-                                openStatusModal('processing', 'Verifying payment...');
-                                try {
-                                    const verifyRes = await fetch(`${API_BASE}/api/complete-payment`, {
-                                        method: "POST",
-                                        headers: { 'Content-Type': 'application/json' },
-                                        body: JSON.stringify({ cf_order_id: startData.cf_order_id })
-                                    });
-                                    const verifyData = await verifyRes.json();
-
-                                    if (verifyData.success) {
-                                        await postPaymentSuccess(startData.cf_order_id, formDetails);
-                                    } else {
-                                        openStatusModal('failed', 'Verification failed');
-                                    }
-                                } catch (e) {
-                                    openStatusModal('failed', 'Verification failed');
-                                }
+                                console.log("Cashfree checkout success (via result object):", result.paymentDetails);
+                                verifyPayment(startData.cf_order_id, formDetails, form);
+                            } else if (result.redirect) {
+                                console.log("Cashfree checkout redirecting...");
+                            } else {
+                                console.log("Cashfree checkout finished without specific result. Verifying order status...");
+                                verifyPayment(startData.cf_order_id, formDetails, form);
                             }
                         });
                     }
@@ -1076,28 +1122,6 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
 
         document.body.appendChild(overlay);
-
-        overlay.querySelector('.celebration-close').addEventListener('click', () => {
-            overlay.remove();
-            window.location.href = `${API_BASE}/myaccount`;
-        });
-
-        overlay.querySelector('.celebration-cta').addEventListener('click', () => {
-            overlay.remove();
-            window.location.href = `${API_BASE}/myaccount`;
-        });
     }
-
-    // ----------------------------------------------------
-    // 13. Floating Callback Slide (ContactSlide)
-    // ----------------------------------------------------
-    const contactSlide = document.createElement('div');
-    contactSlide.className = 'contact-slide-btn';
-    contactSlide.innerHTML = `
-        <a href="https://wa.me/919773576111" target="_blank" class="whatsapp-btn">
-            <i class="ti ti-brand-whatsapp"></i>
-        </a>
-    `;
-    document.body.appendChild(contactSlide);
 });
 
