@@ -1,0 +1,4322 @@
+/* Max width 991px */
+@media only screen and (max-width: 991px) {
+  .container-fluid {
+    max-width: 540px;
+  }
+
+  .culture-warp .container-fluid {
+    max-width: 540px;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .choose-warp .container-fluid {
+    max-width: 540px;
+  }
+
+  .places-warp .container-fluid {
+    max-width: 540px;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .style3-video-warp .container-fluid {
+    max-width: 540px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .default-btn {
+    font-size: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  .default-btn i {
+    top: 4px;
+    margin-left: 5px;
+    left: -1px;
+    font-size: 18px;
+  }
+
+  .pt-130 {
+    padding-top: 60px;
+  }
+
+  .pt-100 {
+    padding-top: 60px;
+  }
+
+  .pb-130 {
+    padding-bottom: 60px;
+  }
+
+  .pt-80 {
+    padding-top: 60px;
+  }
+
+  .ptb-100 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .ptb-80 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .pb-100 {
+    padding-bottom: 60px;
+  }
+
+  .pb-80 {
+    padding-bottom: 60px;
+  }
+
+  .g-5,
+  .gx-5 {
+    --bs-gutter-x: 1.5rem !important;
+  }
+
+  .section-warp {
+    margin-bottom: 20px;
+  }
+
+  .section-warp .heading-content {
+    margin-bottom: 15px;
+  }
+
+  .section-warp .heading-content h2 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+
+  .section-warp .paragraph-content {
+    margin-left: 0;
+  }
+
+  .section-title {
+    margin-bottom: 35px;
+  }
+
+  .section-title h2 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+
+  .all-shapes {
+    display: none;
+  }
+
+  /*
+    Top Header Warp Style
+    ======================================================*/
+  .top-header-details {
+    display: block;
+  }
+
+  .top-header-details .social-list {
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+
+  .top-header-details .social-list::before {
+    display: none;
+  }
+
+  .top-header-details .social-list li .icon {
+    filter: brightness(0) saturate(100%) invert(26%) sepia(24%) saturate(1750%) hue-rotate(199deg) brightness(92%) contrast(99%);
+  }
+
+  .top-header-details .header-contact {
+    padding-left: 0;
+    margin-bottom: 5px;
+  }
+
+  .top-header-link-details {
+    display: block;
+  }
+
+  .top-header-link-details .header-link {
+    padding-right: 0;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  .top-header-link-details .header-link li {
+    padding-right: 20px;
+  }
+
+  .top-header-link-details .header-link::before {
+    display: none;
+  }
+
+  .top-header-link-details .header-account {
+    padding-left: 0;
+  }
+
+  .top-header-link-details .header-account li:last-child i {
+    top: 5px;
+  }
+
+  /*
+    Programs Warp Style
+    ======================================================*/
+  .hero-warp {
+    margin-top: 0;
+  }
+
+  .hero-warp .pagination-bullet-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center !important;
+    bottom: 60px;
+    z-index: 999;
+  }
+
+  .hero-warp .pagination-bullet-btn .swiper-pagination2 {
+    justify-content: center;
+  }
+
+  .hero-slider-warp {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    z-index: 1;
+  }
+
+  .hero-slider-warp .content {
+    margin-bottom: 50px;
+  }
+
+  .hero-slider-warp .content h1 {
+    font-size: 28px;
+    letter-spacing: 0;
+    margin-bottom: 20px;
+    line-height: normal;
+  }
+
+  .hero-slider-warp::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 80%;
+    z-index: -1;
+    /* background-color: #000000; */
+  }
+
+  .update-link {
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
+
+  .information {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+  }
+
+  .information li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+
+  .information li:last-child {
+    margin-bottom: 0;
+  }
+
+  /*
+    Programs Warp Style
+    ======================================================*/
+  .program-images .logo-content {
+    margin-right: 0;
+    margin-top: 25px;
+    padding: 15px;
+  }
+
+  .program-images .big-image {
+    padding-right: 0;
+  }
+
+  .program-content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .program-content h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .program-content .program-list {
+    padding-left: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  .program-content .program-item {
+    margin-top: 20px;
+    padding: 20px;
+    display: block !important;
+  }
+
+  .program-content .program-item .content {
+    padding-left: 0;
+    margin-top: 10px;
+  }
+
+  .program-content .program-item .icon {
+    right: 40px;
+    top: 40px;
+  }
+
+  /*
+    Mission Warp Style
+    ======================================================*/
+  .mission-tab {
+    display: block;
+    padding-right: 0;
+  }
+
+  .mission-tab .tablinks {
+    margin-bottom: 14px;
+    padding: 5px 5px 5px 20px;
+  }
+
+  .mission-tab .tablinks .mission-tab-btn .icon {
+    width: 30px;
+    height: 30px;
+    line-height: 34px;
+  }
+
+  .mission-warp .mission-image {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .mission-content {
+    padding-left: 0;
+  }
+
+  .mission-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .mission-content .mission-box .icon {
+    margin-bottom: 10px;
+  }
+
+  .mission-content .mission-box h5 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .mission-content .mission-box p {
+    margin-bottom: 10px;
+  }
+
+  .mission-content .mission-box .mission-link {
+    margin-bottom: 25px;
+  }
+
+  /*
+    Fun Fact Warp Style
+    ======================================================*/
+  .fun-fact-card .icon.style {
+    margin-right: 12px;
+  }
+
+  .fun-fact-card .icon.style img {
+    height: 40px;
+  }
+
+  .fun-fact-card h2 {
+    font-size: 26px;
+  }
+
+  .fun-fact-card p {
+    font-size: 14px;
+    margin-top: 12px;
+    padding-right: 0;
+  }
+
+  .col-lg-3:nth-child(2) .fun-fact-card {
+    margin-left: 0;
+  }
+
+  .col-lg-3:nth-child(3) .fun-fact-card {
+    margin-left: 0;
+  }
+
+  .col-lg-3:nth-child(3) .fun-fact-card {
+    margin-left: 0;
+  }
+
+  .col-lg-3:nth-child(4) .fun-fact-card {
+    margin-left: 0;
+  }
+
+  /*
+    Features Warp Style
+    ======================================================*/
+  .features-box {
+    margin-bottom: 30px;
+  }
+
+  .features-box .content h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    padding-right: 0;
+  }
+
+  .features-box .content .features-link {
+    font-size: 14px;
+  }
+
+  .features-box video {
+    height: 100%;
+  }
+
+  .features-item {
+    padding-left: 0;
+    margin-bottom: 25px;
+    display: block !important;
+  }
+
+  .features-item .image {
+    width: 100%;
+    height: auto;
+  }
+
+  .features-item .content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .features-item .content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .features-item .content .features-link {
+    font-size: 14px;
+  }
+
+  .features-item-link {
+    display: flex;
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .features-item-link .icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .features-item-link .content {
+    padding-left: 20px;
+  }
+
+  .features-item-link .content p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .features-item-link .content .features-link {
+    font-size: 14px;
+  }
+
+  /*
+    Information Warp Style
+    ======================================================*/
+  .information-content h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  .information-content .information-list {
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+
+  .information-content .information-list li {
+    padding-left: 22px;
+    margin-bottom: 5px;
+  }
+
+  .information-content .information-list li i {
+    top: 4px;
+    font-size: 16px;
+  }
+
+  .information-content .info-button .style2 {
+    margin-bottom: 15px;
+  }
+
+  .information-content .info-link-chat {
+    display: block;
+  }
+
+  .information-content .info-link-chat .content {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .information-content .info-link-chat .content .chat-link {
+    font-size: 14px;
+  }
+
+  .information-image {
+    padding-left: 0;
+  }
+
+  .information-image .small-image {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+  }
+
+  .information-image .small-image .information {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0;
+  }
+
+  .information-image .round-shape {
+    display: none;
+  }
+
+  /*
+    Culture Warp Style
+    ======================================================*/
+  .culture-box {
+    margin-bottom: 20px;
+  }
+
+  .culture-box .content {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    padding: 15px 20px;
+    background: #000000;
+    opacity: 1;
+  }
+
+  .culture-box .content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .col-lg-6:nth-child(2) .culture-box {
+    margin-bottom: 0;
+  }
+
+  /*
+    Academic Warp Style
+    ======================================================*/
+  .academic-item {
+    padding: 25px 20px 25px 20px;
+  }
+
+  .academic-item .academic-card h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .academic-box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .academic-box p {
+    padding-bottom: 0;
+  }
+
+  .academic-slider-warp {
+    padding: 20px 20px 20px 15px;
+  }
+
+  .academic-option .content {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .academic-option .content h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .academic-option .academic-date .date-link {
+    font-size: 13px;
+  }
+
+  /*
+    Recognized Warp Style
+    ======================================================*/
+  .recognized-image {
+    margin-bottom: 20px;
+  }
+
+  .recognized-content {
+    padding-left: 0;
+    margin-bottom: 25px;
+  }
+
+  .recognized-content h2 {
+    letter-spacing: 1px;
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .recognized-content p {
+    margin-bottom: 12px;
+  }
+
+  .choose-card {
+    padding: 25px;
+  }
+
+  .choose-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .choose-card p {
+    margin-bottom: 12px;
+  }
+
+  /*
+    Service Warp Style
+    ======================================================*/
+  .service-content {
+    padding-right: 0;
+  }
+
+  .service-content h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    letter-spacing: normal;
+  }
+
+  .service-content .service-list {
+    margin-top: 20px;
+  }
+
+  .service-image {
+    padding-left: 0;
+  }
+
+  .service-image .image.style2 {
+    margin-top: 30px;
+  }
+
+  .service-image .service-counter {
+    padding: 30px;
+    max-width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+
+  /*
+    Blog Warp Style
+    ======================================================*/
+  .image-blog-card .content {
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+  }
+
+  .image-blog-card .content h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .blog-content-widget {
+    padding-left: 0;
+  }
+
+  .content-blog-card h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .blog-content-widget .blog-donate {
+    padding: 20px;
+  }
+
+  .blog-content-widget .blog-donate .icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .blog-content-widget .blog-donate .content {
+    padding-left: 18px;
+  }
+
+  .blog-content-widget .blog-donate .content h6 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .blog-content-widget .blog-donate .content .donate-link i {
+    top: 4px;
+  }
+
+  /*
+    Footer Warp Style
+    ======================================================*/
+  .col-lg-3:nth-child(2) .footer-widget {
+    margin-left: 0;
+  }
+
+  .col-lg-2:nth-child(3) .footer-widget {
+    margin-left: 0;
+  }
+
+  .col-lg-4:nth-child(4) .footer-widget {
+    margin-left: 0;
+  }
+
+  .footer-widget h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .footer-widget .form-control {
+    height: 50px;
+    padding-left: 15px;
+    margin-bottom: 12px;
+  }
+
+  .footer-widget .footer-form {
+    margin-bottom: 25px;
+  }
+
+  /*
+    Navbar Style2 Warp Style
+    ======================================================*/
+  .navbar.second-navbar {
+    box-shadow: unset;
+    padding-top: 12px;
+  }
+
+  /*
+    Hero Style2 Warp Style
+    ======================================================*/
+  .hero-style2-warp {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  .hero-style2-warp .hero-item-box {
+    padding: 20px;
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
+
+  .hero-style2-warp .hero-item-box .image {
+    width: 80px;
+    height: 100px;
+  }
+
+  .hero-style2-warp .hero-item-box .content {
+    margin-left: 15px;
+  }
+
+  .hero-style2-warp .hero-item-box .content h4 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .hero-style2-warp::before {
+    opacity: 25%;
+  }
+
+  .hero-style2-warp .big-size-text {
+    display: none;
+  }
+
+  .hero-style2-content {
+    margin-bottom: 20px;
+  }
+
+  .hero-style2-content h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .hero-style2-content h2 span {
+    margin-right: 0;
+  }
+
+  .hero-style2-content p {
+    margin-bottom: 15px;
+    padding-right: 0;
+  }
+
+  /*
+    About Warp Style
+    ======================================================*/
+  .about-logo-content {
+    display: block;
+  }
+
+  .about-logo-content .logo {
+    margin-bottom: 20px;
+  }
+
+  .about-logo-content .content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .about-logo-content .content h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .about-content {
+    padding-right: 0;
+  }
+
+  /*
+    About Warp Style
+    ======================================================*/
+  .find-program-warp {
+    padding-top: 60px;
+  }
+
+  .find-program-warp.style2 {
+    padding-top: 60px;
+  }
+
+  .program-content.style2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .program-images.style2 {
+    padding-left: 0;
+  }
+
+  /*
+    About Warp Style
+    ======================================================*/
+  .news-optional-item {
+    padding: 20px;
+  }
+
+  .news-optional-item .news-item {
+    margin-bottom: 20px;
+  }
+
+  .news-optional-item .news-item .image {
+    width: 90%;
+    height: 100%;
+  }
+
+  .news-optional-item .news-item .content {
+    margin-left: 8px;
+  }
+
+  .news-optional-item .news-item .content h3 {
+    font-size: 16px;
+  }
+
+  .news-optional-item .news-item .content .news-link {
+    font-size: 12px;
+  }
+
+  .news-optional-item .news-item .content .news-link i {
+    left: 0;
+    font-size: 14px;
+  }
+
+  /*
+    Admission Warp Style
+    ======================================================*/
+  .admission-content {
+    padding-left: 0;
+  }
+
+  .admission-content h3 {
+    font-size: 22px;
+    letter-spacing: normal;
+    margin-bottom: 5px;
+  }
+
+  .admission-content p {
+    margin-bottom: 20px;
+  }
+
+  .admission-content .admission-list li {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
+
+  .admission-content .admission-list li:first-child {
+    padding-top: 8px;
+  }
+
+  .admission-image {
+    padding-right: 0;
+  }
+
+  /*
+    Apply Warp Style
+    ======================================================*/
+  .apply-card {
+    padding: 25px;
+  }
+
+  .apply-card .icon {
+    margin-bottom: 15px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .apply-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .apply-card p {
+    margin-bottom: 15px;
+  }
+
+  /*
+    Video Style2 Warp Style
+    ======================================================*/
+  .inner-video {
+    height: 100%;
+  }
+
+  .inner-video video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .inner-video .video-btn {
+    display: none;
+  }
+
+  /*
+    Student Review Style2 Warp Style
+    ======================================================*/
+  .student-review-warp .section-warp h2 {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .student-review-slider-warp .swiper-pagination1 {
+    margin-top: 30px;
+  }
+
+  /*
+    Event Warp Style
+    ======================================================*/
+  .event-widget {
+    padding: 20px;
+  }
+
+  .event-widget h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .event-slider-warp .swiper-pagination3 {
+    margin-top: 25px;
+  }
+
+  /*
+    Question Warp Style
+    ======================================================*/
+  .question-content {
+    margin-bottom: 25px;
+  }
+
+  .question-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .question-content .tabs .nav-tabs {
+    margin-bottom: 25px !important;
+  }
+
+  .question-content .tabs .nav-tabs .nav-item {
+    padding-right: 10px;
+    margin-bottom: 8px;
+  }
+
+  .question-content .accordion-question .accordion-item .accordion-button {
+    font-size: 14px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+  }
+
+  .question-images {
+    padding-left: 0;
+  }
+
+  /*
+    Tuva Future Warp Style
+    ======================================================*/
+  .luva-inner-widget .blog-donate {
+    padding: 20px;
+  }
+
+  .luva-inner-widget .blog-donate .icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  .luva-inner-widget .blog-donate .content {
+    padding-left: 18px;
+  }
+
+  .luva-inner-widget .blog-donate .content h6 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .luva-inner-widget .blog-donate .content .donate-link i {
+    top: 4px;
+  }
+
+  /*
+    Top Header Style2 Warp Style
+    ======================================================*/
+  .top-header-warp.style3 .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+
+  .transparent-bg.sticky .sticky-logo {
+    display: block;
+  }
+
+  .transparent-bg .sticky-logo {
+    display: block;
+  }
+
+  .transparent-bg .style3-logo {
+    display: none;
+  }
+
+  .transparent-bg.navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  /*
+    Hero Style3 Warp Style
+    ======================================================*/
+  .inner-hero2-style {
+    padding-top: 60px;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-top: 0 !important;
+    z-index: 1;
+    background-size: cover;
+  }
+
+  .inner-hero2-style::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 80%;
+    background-color: #fff;
+  }
+
+  .inner-hero2-style.bg-1 {
+    background-image: url(../img/heros/style3-hero1-responsive.png);
+  }
+
+  .inner-hero2-style.bg-2 {
+    background-image: url(../img/heros/style3-hero2-responsive.jpg);
+  }
+
+  .inner-hero2-style.bg-3 {
+    background-image: url(../img/heros/style3-hero3-responsive.jpg);
+  }
+
+  .hero-style3-content h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+
+  .hero-style3-warp .tabs .nav-tabs {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    bottom: 0;
+    z-index: 99;
+    right: 0;
+    background: rgba(221, 221, 221, 0.6);
+  }
+
+  .hero-style3-warp .tabs .nav-tabs .nav-item .nav-link {
+    font-size: 14px;
+    padding: 18px 12px;
+    width: auto;
+  }
+
+  /*
+    About Style2 Warp Style
+    ======================================================*/
+  .about-style2-image {
+    position: relative;
+    padding-right: 0;
+  }
+
+  .about-style2-image .image.style2 {
+    margin-top: 25px;
+  }
+
+  .about-style2-image .round-shape {
+    display: none;
+  }
+
+  .about-style2-content {
+    padding-left: 0;
+    padding-top: 20px;
+  }
+
+  .about-style2-content .content {
+    max-width: 100%;
+  }
+
+  .about-style2-content .content h2 {
+    font-size: 22px;
+    letter-spacing: 0;
+    margin-bottom: 8px;
+  }
+
+  .about-style2-content .content .title {
+    margin-bottom: 10px;
+  }
+
+  .about-style2-content .about-link {
+    font-size: 14px;
+  }
+
+  /*
+    Management Style2 Warp Style
+    ======================================================*/
+  .management-warp .management-slider-warp .swiper {
+    margin-right: 0;
+  }
+
+  .management-warp .section-warp {
+    padding-right: 80px;
+  }
+
+  .management-warp .section-warp h2 {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+
+  .management-widget .content {
+    padding-top: 15px;
+  }
+
+  .management-widget .content h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  /*
+    Undergraduate Warp Style
+    ======================================================*/
+  .col-lg-6:nth-child(2) .undergraduate-widget {
+    margin-left: 0;
+  }
+
+  .undergraduate-widget h3 {
+    font-size: 20px;
+    letter-spacing: 0;
+    margin-bottom: 12px;
+  }
+
+  .undergraduate-widget .undergraduate-list li {
+    padding-left: 30px;
+    margin-bottom: 12px;
+  }
+
+  /*
+    Campus Warp Style
+    ======================================================*/
+  .campus-widget .content {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .campus-widget .content h3 {
+    font-size: 18px;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+
+  .campus-widget .content .icon {
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
+    font-size: 20px;
+  }
+
+  /*
+    Event Warp Style
+    ======================================================*/
+  .event-plan-warp .section-warp {
+    margin-bottom: 25px;
+    padding-right: 80px;
+  }
+
+  .event-plan-warp .section-warp h2 {
+    font-size: 20px;
+    letter-spacing: normal;
+  }
+
+  .event-plan-warp .swiper-btn.style2 {
+    top: -35px;
+  }
+
+  .event-plan-warp .event-plan-slider-warp .swiper {
+    margin-right: 0;
+    padding-top: 20px;
+  }
+
+  .event-plan-widget {
+    display: block;
+    align-items: center;
+  }
+
+  .event-plan-widget .content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .event-plan-widget .content h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .event-plan-widget .content .event-plan-list li {
+    font-size: 14px;
+  }
+
+  /*
+    Enquiry Warp Style
+    ======================================================*/
+  .enquiry-warp::before {
+    width: 100%;
+  }
+
+  .enquiry-image {
+    padding-right: 0;
+  }
+
+  .enquiry-image h2 {
+    font-size: 22px;
+    letter-spacing: 0;
+    margin-bottom: 18px;
+  }
+
+  .enquiry-image .image {
+    margin-bottom: 25px;
+  }
+
+  .enquiry-content .enquiry-link {
+    margin-top: 0;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .enquiry-content .enquiry-content .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 55px;
+  }
+
+  .enquiry-content .enquiry-content .content {
+    padding-left: 20px;
+  }
+
+  .enquiry-content .enquiry-content .content h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .inner-hero-content {
+    display: block;
+  }
+
+  .sustainability-image {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  .inner-heros-warp {
+    padding-top: 200px;
+    padding-bottom: 65px;
+  }
+
+  .inner-hero-content h1 {
+    font-size: 25px;
+    letter-spacing: 1.6px;
+    margin-bottom: 12px;
+  }
+
+  .inner-all-pages .about-pages-list li {
+    padding-right: 0;
+    margin: 4px;
+  }
+
+  .inner-all-pages .about-pages-list li a {
+    line-height: 1;
+    padding: 8px 6px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+  }
+
+  .visiting-content {
+    padding-right: 0;
+  }
+
+  .visiting-content h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .visiting-content .visiting-content-style .icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    line-height: 55px;
+  }
+
+  .visiting-content .content {
+    padding-left: 15px;
+  }
+
+  .visiting-content .content h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .visiting-content .default-btn {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .sustainability-warp::before {
+    width: 0;
+  }
+
+  .sustainability-image .image.style2 {
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .sustainability-image .image.style1 {
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 30px;
+  }
+
+  .navbar.inner-navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .sustainability-content h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+
+  .requirements-small-widget {
+    margin-bottom: 20px;
+  }
+
+  .requirements-small-widget .requirement-list li {
+    padding: 18px;
+    font-size: 15px;
+  }
+
+  .requirement-big-warp h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .requirement-big-warp .default-btn.style2 {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .positive-section .blog-title h2 {
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+
+  .positive-image {
+    margin-right: 0;
+  }
+
+  .positive-image-style2 {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .positive-image-style2 .jobs-logo {
+    display: none;
+  }
+
+  .blog-title h2 {
+    font-size: 18px;
+    padding-left: 15px;
+    margin-bottom: 20px !important;
+  }
+
+  .job-description .description-list {
+    margin-bottom: 20px;
+    padding-left: 0;
+  }
+
+  .job-description h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .inner-job-details {
+    background: transparent;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .blog-details-big-widget .blog-title {
+    padding-right: 0;
+  }
+
+  .blog-title {
+    margin-bottom: 25px;
+  }
+
+  .blog-style-content {
+    padding: 20px;
+  }
+
+  .blog-style-content .icon {
+    position: relative;
+  }
+
+  .blog-style-content p {
+    font-size: 16px;
+    padding-left: 0;
+  }
+
+  .tags-share {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+  }
+
+  .tags-share .tags-share {
+    margin-bottom: 10px;
+  }
+
+  .previous-next button {
+    font-size: 14px;
+  }
+
+  .previous-next button i {
+    font-size: 20px;
+    top: 4px;
+  }
+
+  .slider-article-details {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+
+  .comments-widget {
+    padding-bottom: 60px;
+  }
+
+  .event-title-select .event-title h2 {
+    font-size: 22px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .event-big-warp .blog-title h2 {
+    padding-right: 0;
+  }
+
+  .facilities-small-widget {
+    padding: 20px;
+  }
+
+  .international-content {
+    padding-right: 0;
+  }
+
+  .international-list-widget .international-list li {
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  .section-warp {
+    display: block;
+  }
+
+  .section-warp h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .article-item .image {
+    width: 90%;
+    height: auto;
+  }
+
+  .article-item .content {
+    margin-left: 8px;
+  }
+
+  .article-item .content h3 {
+    font-size: 14px;
+    padding-right: 20px;
+  }
+
+  .article-item .content .news-link {
+    font-size: 12px;
+  }
+
+  .article-item .content .news-link i {
+    font-size: 15px;
+  }
+
+  .international-support-image {
+    padding-right: 0;
+  }
+
+  .international-support-image .small-image {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .international-support-content h2 {
+    font-size: 20px;
+  }
+
+  .international-support-content .info-button .style2 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .international-info .item-one {
+    margin-bottom: 30px;
+  }
+
+  .academic-item-date {
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    display: block;
+  }
+
+  .academic-item-date .date-box {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .fun-fact-warp {
+    overflow: hidden;
+  }
+
+  .features-warp {
+    overflow: hidden;
+  }
+
+  .mission-tab .tablinks.active {
+    width: 100%;
+  }
+
+  .about-campus-title {
+    max-width: 100%;
+  }
+
+  .about-campus-title .about-logo {
+    display: none;
+  }
+
+  .about-campus-title .about-logo2 {
+    display: none;
+  }
+
+  .about-campus-title h2 {
+    font-size: 22px;
+  }
+
+  .build-campus-list {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+
+  .map-content {
+    padding: 25px;
+    background: #b7d8ef;
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+
+  .map-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .value-title h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .duties-accordion .accordion-item .accordion-button h2 {
+    font-size: 20px;
+  }
+
+  .history-images-warp .swiper {
+    margin-right: 0;
+  }
+
+  .about-history-content .big-paragraph {
+    font-size: 16px;
+    color: #525271;
+  }
+
+  .about-history-title h2 {
+    font-size: 22px;
+    letter-spacing: 1.28px;
+    margin-bottom: 0;
+  }
+
+  .build-campus-title {
+    margin-bottom: 20px;
+  }
+
+  .build-campus-title h2 {
+    font-size: 18px;
+  }
+
+  .build-campus-list .build-list.style1 {
+    margin-right: 0;
+  }
+
+  .build-campus-list .build-list.style2 {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+
+  .inner-video h2 {
+    font-size: 16px;
+  }
+
+  .building-hours-title {
+    max-width: 100%;
+  }
+
+  .building-hours-title h2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .facilities-details-widget {
+    padding-right: 0;
+  }
+
+  .facilities-details-widget .content1 h3 {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: normal;
+    margin-bottom: 18px;
+  }
+
+  .facilities-details-widget {
+    padding-right: 0;
+    margin-bottom: 60px;
+  }
+
+  .inner-all-pages .about-pages-list li a::before {
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    line-height: 24px;
+    font-size: 10px;
+    color: #5ca89f;
+  }
+
+  .input-bg {
+    padding: 10px;
+  }
+
+  .program-choose-content p {
+    margin-bottom: 0;
+    padding-right: 0;
+  }
+
+  .personal-info .information-list li p {
+    width: 180px;
+    font-size: 12px;
+  }
+
+  .personal-info .information-list li span {
+    font-size: 12px;
+    width: 212px;
+  }
+
+  .academic-info {
+    margin-top: 20px;
+  }
+
+  .main-blog-card .content h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .blog-small-widget {
+    margin-top: 60px;
+  }
+
+  .blog-small-widget .all-box {
+    padding: 20px;
+  }
+
+  .program-page-title h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .program-page-title h2 span {
+    height: 35px;
+    padding: 5px;
+  }
+
+  .program-main-title h2 {
+    font-size: 22px;
+  }
+
+  .undergraduate-program-content {
+    padding-left: 0;
+  }
+
+  .undergraduate-program-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .undergraduate-program-content h2 span {
+    height: 38px;
+  }
+
+  .graduate-program-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    padding-right: 0;
+  }
+
+  .graduate-program-content h2 span {
+    height: 38px;
+  }
+
+  .graduate-program-button {
+    text-align: start !important;
+    margin-top: 20px;
+  }
+
+  .administration-content {
+    padding-right: 0;
+  }
+
+  .administration-content .content-one h2 {
+    font-size: 22px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .administration-content .content-with-list {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .administration-small-widget {
+    padding: 25px;
+    margin-bottom: 15px;
+  }
+
+  .administration-accordion {
+    margin-bottom: 30px;
+  }
+
+  .administration-accordion .accordion-item .semester-list li {
+    padding-left: 12px;
+    padding-right: 40px;
+  }
+
+  .requirement-language {
+    margin-bottom: 30px;
+  }
+
+  .administration-finance-item {
+    display: block;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .administration-finance-item h1 {
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  .administration-finance-item h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .administration-finance-content {
+    margin-bottom: 30px;
+  }
+
+  .administration-finance-content .administration-finance-list li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .administration-availability-content .availability-list li {
+    display: block;
+  }
+
+  .administration-availability-content .availability-list li h6 {
+    margin-bottom: 12px;
+  }
+
+  .administration-availability-content .availability-list li p {
+    margin-bottom: 5px;
+  }
+
+  .administration-availability-content .availability-list li .content2 {
+    width: 100%;
+  }
+
+  .administration-availability-content .availability-list li .content3 {
+    width: 100%;
+  }
+
+  .administration-availability-content .availability-list li .content4 {
+    width: 100%;
+  }
+
+  .laptop-content {
+    margin-bottom: 30px;
+  }
+
+  .transfer-credit-card .content p {
+    margin-bottom: 10px;
+  }
+
+  .transfer-credit-card .content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .tuition-content-widget {
+    padding-right: 0;
+  }
+
+  .tuition-content-widget .tuition-awards:last-child {
+    margin-bottom: 30px;
+  }
+
+  .student-accessibility-content .blog-title h2 {
+    padding-right: 0;
+  }
+
+  .accessibility-content2 {
+    margin-bottom: 30px;
+  }
+
+  .online-list-widget {
+    margin-bottom: 30px;
+  }
+
+  .information-teach-content-widget .content2 .accessibility-contact-list {
+    margin-bottom: 20px;
+  }
+
+  .parking-locker-content .blog-title {
+    margin-bottom: 40px;
+  }
+
+  .parking-locker-content .parking-notice {
+    margin-bottom: 35px;
+  }
+
+  .residence-content-widget {
+    padding-right: 0;
+  }
+
+  .residence-content-widget {
+    margin-bottom: 35px;
+  }
+
+  .residence-content-widget .residence-button {
+    display: block;
+    align-items: center;
+  }
+
+  .residence-content-widget .residence-button .default-btn {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 15px;
+  }
+
+  .career-service-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .health-service-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .experimental-learning-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .tutoring-center-content {
+    padding-right: 0;
+    margin-bottom: 35px;
+  }
+
+  .slide-bar-offcanvas .offcanvas-body {
+    width: 100%;
+    padding: 60px 20px 30px 20px;
+  }
+
+  .join-luva-box .default-btn {
+    margin-top: 30px;
+  }
+}
+
+/* Max width 991px */
+@media only screen and (max-width: 370px) {
+  .hero-slider-warp .content .default-btn.style2 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+  .g-5,
+  .gx-5 {
+    --bs-gutter-x: 3rem !important;
+  }
+
+  .top-header-link-details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-header-link-details .header-link {
+    margin-bottom: 0;
+  }
+
+  .top-header-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .top-header-details .social-list {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  .top-header-details .header-contact {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .information {
+    display: flex;
+  }
+
+  .information li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 5px;
+    margin-bottom: 0;
+  }
+
+  .information li a {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter";
+  }
+
+  .information li i {
+    font-size: 16px;
+    top: 2px;
+  }
+
+  .program-content .program-item {
+    padding: 5px;
+    display: flex !important;
+  }
+
+  .program-content .program-item .content {
+    padding-left: 20px;
+    margin-top: 0;
+    padding-right: 50px;
+  }
+
+  .program-content .program-item .icon {
+    right: 10px;
+    top: auto;
+  }
+
+  .mission-warp::before {
+    height: 50%;
+  }
+
+  .col-lg-3:nth-child(3) .fun-fact-card p {
+    padding-right: 40px;
+  }
+
+  .features-item {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .features-item .content {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+
+  .features-item .image {
+    width: 150px;
+    height: 134px;
+  }
+
+  .news-optional-item .news-item .image {
+    width: 190px;
+    height: auto;
+  }
+
+  .news-optional-item .news-item .content {
+    margin-left: 20px;
+  }
+
+  .news-optional-item .news-item .content h3 {
+    font-size: 18px;
+  }
+
+  .news-optional-item .news-item .content .news-link {
+    font-size: 14px;
+  }
+
+  .article-item .content h3 {
+    font-size: 23px;
+    padding-right: 20px;
+  }
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .container-fluid {
+    max-width: 720px;
+  }
+
+  .culture-warp .container-fluid {
+    max-width: 720px;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .choose-warp .container-fluid {
+    max-width: 720px;
+  }
+
+  .places-warp .container-fluid {
+    max-width: 720px;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .top-header-link-details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .top-header-link-details .header-link {
+    margin-bottom: 0;
+  }
+
+  .top-header-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  .top-header-details .social-list {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+
+  .top-header-details .header-contact {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .hero-slider-warp .content h1 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .information {
+    display: flex;
+  }
+
+  .information li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 5px;
+    margin-bottom: 0;
+  }
+
+  .information li a {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: "Inter";
+  }
+
+  .information li i {
+    font-size: 16px;
+    top: 2px;
+  }
+
+  .program-content .program-item {
+    padding: 5px;
+    display: flex !important;
+  }
+
+  .program-content .program-item .content {
+    padding-left: 20px;
+    margin-top: 0;
+    padding-right: 50px;
+  }
+
+  .program-content .program-item .icon {
+    right: 10px;
+    top: auto;
+  }
+
+  .mission-warp::before {
+    height: 50%;
+  }
+
+  .col-lg-3:nth-child(3) .fun-fact-card p {
+    padding-right: 40px;
+  }
+
+  .features-item {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .features-item .content {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+
+  .features-item .image {
+    width: 150px;
+    height: 134px;
+  }
+
+  .find-program-warp {
+    padding-top: 80px;
+  }
+
+  .mission-tab .tablinks {
+    padding: 10px 10px 10px 30px;
+  }
+
+  .information-content h2 {
+    font-size: 30px;
+  }
+
+  .information-image {
+    padding-left: 220px;
+  }
+
+  .information-image .small-image {
+    position: absolute;
+    bottom: 78px;
+    left: 38px;
+    width: 204px;
+    height: 204px;
+  }
+
+  .information-image .round-shape {
+    top: 50px;
+    display: block;
+  }
+
+  .section-title h2 {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
+
+  .academic-item .academic-card h3 {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .service-image .service-counter {
+    padding: 30px;
+    text-align: center;
+    max-width: 250px;
+    position: absolute;
+    background-color: var(--bs-white);
+    bottom: 0;
+    left: 140px;
+  }
+
+  .news-optional-item .news-item .image {
+    width: 190px;
+    height: auto;
+  }
+
+  .news-optional-item .news-item .content {
+    margin-left: 20px;
+  }
+
+  .news-optional-item .news-item .content h3 {
+    font-size: 18px;
+  }
+
+  .news-optional-item .news-item .content .news-link {
+    font-size: 14px;
+  }
+
+  .hero-style3-warp .tabs .nav-tabs {
+    position: absolute;
+    width: 50%;
+  }
+
+  .inner-hero2-style {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  .luva-inner-widget .blog-donate .content h6 {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .program-images .logo-content .logo {
+    width: 100px;
+    height: 89px;
+  }
+
+  .building-hours-title h2 {
+    font-size: 30px;
+  }
+
+  .build-campus-list .build-list.style2 {
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .build-campus-title h2 {
+    font-size: 25px;
+  }
+
+  .requirement-big-warp .default-btn.style2 {
+    margin-left: 15px;
+    margin-top: 0;
+  }
+
+  .personal-info .information-list li p {
+    font-size: 15px;
+  }
+
+  .personal-info .information-list li span {
+    font-size: 15px;
+  }
+
+  .article-item .content h3 {
+    font-size: 23px;
+    padding-right: 20px;
+  }
+
+  .international-support-image {
+    padding-right: 172px;
+    position: relative;
+  }
+
+  .international-support-image .small-image {
+    position: absolute;
+    bottom: 100px;
+    right: 38px;
+    width: 236px;
+    height: 156px;
+  }
+
+  .academic-item-date {
+    display: flex;
+  }
+
+  .academic-item-date .date-box {
+    margin-top: 0;
+    width: 270px;
+  }
+
+  .academic-item-date .academic-event-content {
+    max-width: 290px;
+  }
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .container-fluid {
+    max-width: 960px;
+  }
+
+  .culture-warp .container-fluid {
+    max-width: 960px;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .choose-warp .container-fluid {
+    max-width: 960px;
+  }
+
+  .places-warp .container-fluid {
+    max-width: 960px;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .default-btn {
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  /*
+    Top Header Warp Style
+    ======================================================*/
+  .top-header-link-details .header-account {
+    padding-left: 15px;
+  }
+
+  .top-header-link-details .header-account li {
+    padding-right: 15px;
+  }
+
+  .top-header-link-details .header-account li:last-child {
+    padding-left: 18px;
+    padding-right: 0;
+  }
+
+  .top-header-link-details .header-link {
+    padding-right: 18px;
+  }
+
+  .top-header-link-details .header-link li {
+    padding-right: 15px;
+  }
+
+  .top-header-details .header-contact {
+    padding-left: 15px;
+  }
+
+  .top-header-details .header-contact li {
+    font-size: 12px;
+    font-weight: 500;
+    padding-left: 18px;
+    padding-right: 20px;
+  }
+
+  .top-header-details .header-contact li i {
+    top: 2px;
+  }
+
+  .top-header-details .social-list {
+    padding-right: 25px;
+  }
+
+  /*
+    Navbar Warp Style
+    ======================================================*/
+  .navbar .navbar-nav {
+    margin-right: 30px;
+  }
+
+  .navbar .navbar-nav .nav-item {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 12px;
+  }
+
+  /*
+    Hero Slider Warp Style
+    ======================================================*/
+  .hero-slider-warp .content {
+    max-width: 545px;
+  }
+
+  .hero-slider-warp .content h1 {
+    font-size: 40px;
+    letter-spacing: 1.4px;
+    margin-bottom: 25px;
+  }
+
+  .information li {
+    width: 270px;
+    padding: 20px;
+  }
+
+  /*
+    Program Warp Style
+    ======================================================*/
+  .program-images .big-image {
+    padding-right: 0;
+  }
+
+  .program-images .logo-content .logo {
+    width: 70px;
+    height: 65px;
+  }
+
+  .program-content {
+    padding-left: 15px;
+    padding-right: 0;
+  }
+
+  .program-content .program-list {
+    margin-left: 10px;
+  }
+
+  .program-content .search-list {
+    font-size: 14px;
+    display: block;
+    margin-right: -90px;
+  }
+
+  /*
+    Mission Warp Style
+    ======================================================*/
+  .mission-warp .mission-image {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mission-tab {
+    padding-right: 15px;
+  }
+
+  .mission-content {
+    padding-left: 0;
+  }
+
+  .mission-content h3 {
+    margin-bottom: 20px;
+  }
+
+  .mission-content .mission-box .mission-link {
+    margin-bottom: 40px;
+  }
+
+  /*
+    Fun Fact Warp Style
+    ======================================================*/
+  .fun-fact-card .icon .style {
+    margin-right: 12px;
+    width: 40px;
+  }
+
+  .fun-fact-card h2 {
+    font-size: 30px;
+  }
+
+  .fun-fact-card p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    padding-right: 0;
+  }
+
+  .col-lg-3:nth-child(2) .fun-fact-card {
+    margin-left: 0;
+  }
+
+  .col-lg-3:nth-child(3) .fun-fact-card {
+    margin-left: 0;
+  }
+
+  .col-lg-3:nth-child(4) .fun-fact-card {
+    margin-left: 0;
+  }
+
+  /*
+    Features Warp Style
+    ======================================================*/
+  .features-item .content h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+
+  /*
+    Information Warp Style
+    ======================================================*/
+  .information-image {
+    padding-left: 145px;
+    position: relative;
+  }
+
+  .information-image .small-image {
+    bottom: 20px;
+  }
+
+  .information-content .info-link-chat .chat-list {
+    display: flex;
+  }
+
+  /*
+    Culture Warp Style
+    ======================================================*/
+  .culture-box .content {
+    padding: 15px 22px;
+    max-width: 380px;
+  }
+
+  .culture-box .content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .culture-box .content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .culture-box .content .culture-link {
+    font-size: 14px;
+  }
+
+  /*
+    Academic Warp Style
+    ======================================================*/
+  .academic-item {
+    padding: 25px 15px 25px 15px;
+  }
+
+  .academic-item .academic-card h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .academic-item .academic-card .default-btn {
+    font-size: 15px;
+    padding: 16px;
+  }
+
+  .academic-box h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .academic-slider-warp {
+    padding: 20px 15px 20px 15px;
+  }
+
+  .academic-option .content {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .academic-option .content h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .academic-option .content .academic-link {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .academic-option .academic-date .date-link {
+    font-size: 14px;
+  }
+
+  /*
+    Recognized Warp Style
+    ======================================================*/
+  .recognized-content {
+    padding-left: 30px;
+  }
+
+  .recognized-content h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .recognized-content p {
+    margin-bottom: 15px;
+  }
+
+  /*
+    Choose Warp Style
+    ======================================================*/
+  .choose-card {
+    padding: 20px 15px;
+  }
+
+  .choose-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .choose-card p {
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+
+  .choose-card .choose-link {
+    font-size: 12px;
+  }
+
+  /*
+    Services Warp Style
+    ======================================================*/
+  .service-image {
+    padding-left: 0;
+    position: relative;
+  }
+
+  .service-image .service-counter {
+    left: -90px;
+  }
+
+  .service-content {
+    padding-right: 30px;
+  }
+
+  .service-content h2 {
+    font-size: 30px;
+    letter-spacing: normal;
+  }
+
+  .image-blog-card .content h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  .blog-content-widget {
+    padding-left: 0;
+  }
+
+  .content-blog-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .content-blog-card .default-btn {
+    padding: 15px 20px;
+  }
+
+  .footer-widget .footer-logos li {
+    padding-right: 15px;
+  }
+
+  .top-header-warp.style3 .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+
+  /*
+    Hero Style3 Warp Style
+    ======================================================*/
+  .inner-hero2-style {
+    margin: 0;
+    margin-top: 0 !important;
+    z-index: 1;
+    background-size: cover;
+  }
+
+  .inner-hero2-style.bg-1 {
+    background-image: url(../img/heros/style3-hero1-responsive.png);
+  }
+
+  .inner-hero2-style.bg-2 {
+    background-image: url(../img/heros/style3-hero2-responsive.jpg);
+  }
+
+  .inner-hero2-style.bg-3 {
+    background-image: url(../img/heros/style3-hero3-responsive.jpg);
+  }
+
+  .transparent-bg.sticky .sticky-logo {
+    display: block;
+  }
+
+  .transparent-bg .sticky-logo {
+    display: block;
+  }
+
+  .transparent-bg .style3-logo {
+    display: none;
+  }
+
+  .transparent-bg.navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .transparent-bg.navbar .navbar-nav {
+    margin-right: 20px;
+  }
+
+  .transparent-bg.navbar .navbar-nav .nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .transparent-bg.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+
+  .navbar .social-list {
+    display: none;
+  }
+
+  .inner-hero2-style {
+    background-size: cover;
+    padding-top: 305px;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-top: 0 !important;
+  }
+
+  .inner-hero2-style::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 48%;
+    width: 48%;
+    border-radius: 0 20px 0 0;
+    background-color: #ffffff;
+  }
+
+  .hero-style3-warp .tabs .nav-tabs {
+    width: 450px;
+  }
+
+  .hero-style3-warp .tabs .nav-tabs .nav-item .nav-link {
+    font-size: 16px;
+    padding: 20px;
+    width: auto;
+  }
+
+  .hero-style3-content {
+    max-width: 445px;
+    position: relative;
+    top: 0;
+  }
+
+  .hero-style3-content h1 {
+    font-size: 30px;
+    letter-spacing: 1.4px;
+    margin-bottom: 5px;
+  }
+
+  .hero-style3-content p {
+    font-size: 14px;
+  }
+
+  .only-992-device-none {
+    display: none;
+  }
+
+  .only-992-device {
+    display: block;
+  }
+
+  .about-style2-warp .about-logo {
+    right: 2%;
+  }
+
+  .about-style2-content {
+    padding-left: 0;
+  }
+
+  .program-content.style2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .management-warp .management-slider-warp .swiper {
+    margin-right: 0;
+  }
+
+  .col-lg-6:nth-child(2) .undergraduate-widget {
+    margin-left: 110px;
+  }
+
+  .news-optional-item {
+    padding: 25px 15px 20px 15px;
+  }
+
+  .news-optional-item .news-item .image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .news-optional-item .news-item .content {
+    margin-left: 12px;
+  }
+
+  .news-optional-item .news-item .content h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .news-optional-item .news-item .content .news-link {
+    font-size: 12px;
+  }
+
+  .event-plan-widget .image {
+    width: 210px;
+    height: 170px;
+  }
+
+  .enquiry-content .enquiry-link {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+
+  .enquiry-content .enquiry-shape {
+    width: 100px;
+  }
+
+  .enquiry-content h4 {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  .enquiry-content .content {
+    padding-left: 15px;
+  }
+
+  .question-content .tabs .nav-tabs .nav-item .nav-link {
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: 12px 10px;
+  }
+
+  .sustainability-image {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  .map-content h2 {
+    font-size: 24px;
+    padding-right: 50px;
+  }
+
+  .admission-content {
+    padding-left: 0;
+  }
+
+  .hero-style2-warp {
+    padding-bottom: 130px;
+    padding-top: 200px;
+  }
+
+  .hero-style2-warp::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 50%;
+    background: linear-gradient(90deg, #dee1e6 0%, #e5e6ea 17.57%, #ebecf0 34.86%, #e8e9ed 52.23%, #e7e8ec 65.17%, #d7dadf 97.75%);
+  }
+
+  .about-content {
+    padding-right: 0;
+  }
+
+  .apply-card {
+    padding: 30px;
+  }
+
+  .apply-card h3 {
+    padding-right: 30px;
+  }
+
+  .apply-card .icon {
+    width: 40px;
+    margin-bottom: 18px;
+  }
+
+  .apply-card p {
+    font-size: 14px;
+  }
+
+  .facilities-details-widget {
+    padding-right: 40px;
+  }
+
+  .inner-hero-content h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
+
+  .inner-all-pages .about-pages-list li {
+    padding-right: 0;
+    margin: 4px;
+  }
+
+  .inner-all-pages .about-pages-list li a::before {
+    top: -7px;
+    width: 15px;
+    height: 15px;
+    line-height: 24px;
+    font-size: 10px;
+    color: #5ca89f;
+  }
+
+  .article-item .image {
+    width: 70px;
+    height: auto;
+  }
+
+  .article-item .content {
+    margin-left: 12px;
+  }
+
+  .article-item .content h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding-right: 0;
+  }
+
+  .article-item .content .news-link {
+    font-size: 12px;
+  }
+
+  .article-item.style2 {
+    margin-left: 0;
+  }
+
+  .international-support-image .round-shape {
+    top: -35px;
+    right: 69px;
+  }
+
+  .international-support-image .small-image {
+    bottom: 25px;
+  }
+
+  .international-support-content .international-info .item-two h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .international-support-content .international-info .item-one h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .faculty-list li {
+    font-size: 16px;
+  }
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .container-fluid {
+    max-width: 1140px;
+  }
+
+  .top-header-warp .container-fluid {
+    max-width: 100% !important;
+  }
+
+  .culture-warp .container-fluid {
+    max-width: 1140px;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  .choose-warp .container-fluid {
+    max-width: 1140px;
+  }
+
+  .places-warp .container-fluid {
+    max-width: 1140px;
+    padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  }
+
+  /*
+    Top Hero Warp Style
+    ======================================================*/
+  .top-header-warp.style3 .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+
+  /*
+    Hero Style3 Warp Style
+    ======================================================*/
+  .inner-hero2-style {
+    margin: 0;
+    margin-top: 0 !important;
+    z-index: 1;
+    background-size: cover;
+  }
+
+  .inner-hero2-style.bg-1 {
+    background-image: url(../img/heros/style3-hero1-responsive.png);
+  }
+
+  .inner-hero2-style.bg-2 {
+    background-image: url(../img/heros/style3-hero2-responsive.jpg);
+  }
+
+  .inner-hero2-style.bg-3 {
+    background-image: url(../img/heros/style3-hero3-responsive.jpg);
+  }
+
+  /*
+    Header & Navbar Style3 Warp Style
+    ======================================================*/
+  .transparent-bg.sticky .sticky-logo {
+    display: block;
+  }
+
+  .transparent-bg .sticky-logo {
+    display: block;
+  }
+
+  .transparent-bg .style3-logo {
+    display: none;
+  }
+
+  .transparent-bg.navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .transparent-bg.navbar .navbar-nav {
+    margin-right: 20px;
+  }
+
+  .transparent-bg.navbar .navbar-nav .nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .transparent-bg.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+
+  .transparent-bg .header-contact {
+    padding-left: 0;
+  }
+
+  .navbar .social-list {
+    padding-left: 20px;
+  }
+
+  .navbar.first-navbar .navbar-nav {
+    margin-right: 15px !important;
+  }
+
+  .navbar.first-navbar .navbar-nav .nav-item {
+    margin-left: 18px !important;
+    margin-right: 18px !important;
+  }
+
+  .navbar.first-navbar .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+  }
+
+  .navbar.first-navbar .others-option .option-item {
+    padding-right: 32px !important;
+  }
+
+  /*
+    Hero Style2 Warp Style
+    ======================================================*/
+  .inner-hero2-style {
+    background-size: cover;
+    padding-top: 305px;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-top: 0 !important;
+  }
+
+  .inner-hero2-style::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 48%;
+    width: 48%;
+    border-radius: 0 20px 0 0;
+    background-color: #ffffff;
+  }
+
+  .hero-style3-warp .tabs .nav-tabs {
+    width: 450px;
+  }
+
+  .hero-style3-warp .tabs .nav-tabs .nav-item .nav-link {
+    font-size: 16px;
+    padding: 20px;
+    width: auto;
+  }
+
+  /*
+    Hero Style3 Warp Style
+    ======================================================*/
+  .hero-style3-content {
+    max-width: 502px;
+    position: relative;
+    top: 0;
+  }
+
+  .hero-style3-content h1 {
+    font-size: 45px;
+    letter-spacing: 2.4px;
+    margin-bottom: 5px;
+  }
+
+  /*
+    About Style2 Warp Style
+    ======================================================*/
+  .about-style2-warp .about-logo {
+    right: 2%;
+  }
+
+  /*
+    Fun Fact Warp Style
+    ======================================================*/
+  .fun-fact-card p {
+    padding-right: 0;
+  }
+
+  .col-lg-3:nth-child(2) .fun-fact-card {
+    margin-left: 0;
+  }
+
+  .col-lg-3:nth-child(3) .fun-fact-card {
+    margin-left: 30px;
+  }
+
+  .col-lg-3:nth-child(4) .fun-fact-card {
+    margin-left: 30px;
+  }
+
+  /*
+    Question Warp Style
+    ======================================================*/
+  .question-content .tabs .nav-tabs .nav-item .nav-link {
+    font-size: 12px;
+    letter-spacing: 0.3px;
+  }
+
+  .choose-card {
+    padding: 30px 20px;
+  }
+
+  .choose-card p {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .choose-card .choose-link span {
+    font-size: 14px;
+  }
+
+  .sustainability-image {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+
+  .program-content .search-list {
+    display: block;
+    margin-right: -25px;
+  }
+
+  .program-content .program-list {
+    margin-left: 0;
+  }
+
+  .information li {
+    width: 300px;
+  }
+
+  .apply-card {
+    padding: 35px 25px;
+  }
+
+  .event-widget h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .hero-style2-warp {
+    padding-bottom: 130px;
+    padding-top: 130px;
+  }
+}
+
+/* Min width 1400px to Max width 1499px */
+@media only screen and (min-width: 1400px) and (max-width: 1899px) {
+  .container-fluid {
+    max-width: 1320px;
+  }
+
+  /*
+    Hero Style3 Warp Style
+    ======================================================*/
+  .inner-hero2-style {
+    margin: 0;
+    margin-top: 0 !important;
+    z-index: 1;
+    background-size: cover;
+  }
+
+  .inner-hero2-style.bg-1 {
+    background-image: url(../img/heros/style3-hero1-responsive.png);
+  }
+
+  .inner-hero2-style.bg-2 {
+    background-image: url(../img/heros/style3-hero2-responsive.jpg);
+  }
+
+  .inner-hero2-style.bg-3 {
+    background-image: url(../img/heros/style3-hero3-responsive.jpg);
+  }
+
+  /*
+    Header & Navbar Style3 Warp Style
+    ======================================================*/
+  .transparent-bg.sticky .sticky-logo {
+    display: block;
+  }
+
+  .transparent-bg .sticky-logo {
+    display: block;
+  }
+
+  .transparent-bg .style3-logo {
+    display: none;
+  }
+
+  .transparent-bg.navbar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .transparent-bg.navbar .navbar-nav {
+    margin-right: 20px;
+  }
+
+  .transparent-bg.navbar .navbar-nav .nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .transparent-bg.navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+
+  .transparent-bg .header-contact {
+    padding-left: 0;
+  }
+
+  .navbar .social-list {
+    padding-left: 20px;
+  }
+
+  .top-header-warp.style3 .container-fluid {
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+  }
+
+  /*
+    Hero Style2 Warp Style
+    ======================================================*/
+  .inner-hero2-style {
+    background-size: cover;
+    padding-top: 405px;
+    margin: 0;
+    padding-bottom: 20px;
+    margin-top: 0 !important;
+  }
+
+  .inner-hero2-style::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 48%;
+    width: 48%;
+    border-radius: 0 20px 0 0;
+    background-color: #ffffff;
+  }
+
+  .hero-style3-warp .tabs .nav-tabs {
+    width: 450px;
+  }
+
+  .hero-style3-warp .tabs .nav-tabs .nav-item .nav-link {
+    font-size: 16px;
+    padding: 20px;
+    width: auto;
+  }
+
+  .choose-card {
+    padding: 35px 20px;
+  }
+
+  .choose-card p {
+    font-size: 15px;
+  }
+
+  .hero-style2-warp {
+    padding-bottom: 120px;
+    padding-top: 235px;
+  }
+
+  .sustainability-image {
+    margin-left: 60px;
+    margin-right: 0;
+    padding-left: 45px;
+  }
+}
+
+/*# sourceMappingURL=responsive.css.map */
+
+
+/* --- Responsive styles from components/Layout/TopHeader.vue --- */
+@media (min-width: 992px) {
+  .header-unified-links li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: 991px) {
+  .top-header-warp .row {
+    display: none;
+  }
+}
+
+
+/* --- Responsive styles from components/Layout/MainNavbar.vue --- */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {}
+
+@media (max-width: 991px) {
+  .apply-now-btn {
+
+    text-align: center;
+    width: fit-content;
+  }
+
+  .nav-item.apply-btn {
+    text-align: center;
+  }
+}
+
+
+/* --- Responsive styles from components/EAs/EaBanner.vue --- */
+@media (max-width: 991px) {
+    .program-hero-card {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .program-info-section {
+        padding: 2rem 1rem;
+    }
+
+    .program-title {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-slider-warp {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .program-hero-card {
+        padding: 2rem 1.5rem;
+        border-radius: 15px;
+    }
+
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-header p {
+        font-size: 0.9rem;
+    }
+
+    .program-info-section {
+        padding: 1.5rem 1rem;
+    }
+
+    .program-title {
+        font-size: 1.4rem;
+    }
+
+    .program-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .play-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .play-icon i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .celebration-content {
+        padding: 44px 22px 28px;
+    }
+
+    .celebration-title {
+        font-size: 1.5rem;
+    }
+
+    .celebration-emoji {
+        font-size: 52px;
+    }
+}
+
+
+/* --- Responsive styles from components/Programs/GovtOnprogram.vue --- */
+@media (max-width: 1200px) {
+    .title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 991px) {
+    .title {
+        font-size: 24px;
+    }
+
+    .govt-program-area {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .card-image-box {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .govt-program-area {
+        padding: 40px 0px;
+    }
+
+    .section-title {
+        margin-bottom: 36px;
+    }
+}
+
+
+/* --- Responsive styles from components/EAs/EAaeiap.vue --- */
+@media (max-width: 991px) {
+    .flip-card-wrapper {
+        height: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+    .aeiap-area {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .sub-title {
+        font-size: 14px;
+    }
+
+    .flip-card-wrapper {
+        height: 280px;
+    }
+}
+
+@media (max-width: 767px) {
+    .aeiap-area {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .title {
+        font-size: 24px !important;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .sub-title {
+        font-size: 14px;
+    }
+
+    /* =========================
+       SINGLE CARD CONTAINER
+    ========================== */
+
+    .flip-card-wrapper {
+        height: auto;
+        perspective: none;
+
+        background: #ffffff;
+        border: 1px solid #f0f0f0;
+        border-radius: 12px;
+        overflow: hidden;
+
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+    }
+
+    /* Disable flip animation on mobile */
+
+    .flip-card {
+        position: relative;
+        width: 100%;
+        height: auto;
+
+        transform: none !important;
+        transition: none;
+
+        display: flex;
+        flex-direction: column;
+
+        cursor: default;
+    }
+
+    .flip-card-wrapper:hover .flip-card {
+        transform: none !important;
+    }
+
+    /* =========================
+       IMAGE SECTION
+    ========================== */
+
+    .flip-card-front {
+        position: relative;
+        inset: auto;
+
+        width: 100%;
+        height: 150px;
+        min-height: 150px;
+
+        padding: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #ffffff;
+
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+
+        overflow: hidden;
+
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+    }
+
+    .flip-logo-img {
+        width: auto;
+        height: 100px;
+        max-width: 180px;
+
+        object-fit: contain;
+        margin: 0;
+    }
+
+    /* =========================
+       CONTENT SECTION
+    ========================== */
+
+    .flip-card-back {
+        position: relative;
+        inset: auto;
+
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        transform: none !important;
+
+        padding: 10px 20px 22px;
+
+        background: #ffffff;
+
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+
+        overflow: visible;
+
+        backface-visibility: visible;
+        -webkit-backface-visibility: visible;
+
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .card-title-back {
+        font-size: 17px;
+    }
+
+    .card-desc-back {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+}
+
+
+/* --- Responsive styles from components/EAs/CareerPath.vue --- */
+@media (max-width: 991px) {
+
+    .career-path-section {
+        padding: 50px 0 45px;
+    }
+
+    .career-path-heading {
+        margin-bottom: 35px;
+    }
+
+    .career-path-heading h2 {
+        font-size: 38px;
+    }
+
+    .career-path-image {
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .career-path-section {
+        padding: 35px 0 30px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .career-path-heading {
+        margin-bottom: 25px;
+    }
+
+    .career-path-heading h2 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .career-path-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .career-path-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .career-path-section {
+        padding: 30px 0 25px;
+    }
+
+    .career-path-heading {
+        margin-bottom: 20px;
+    }
+
+    .career-path-heading h2 {
+        font-size: 24px;
+    }
+}
+
+
+/* --- Responsive styles from components/EAs/EAIAProgram.vue --- */
+@media (max-width: 991px) {
+    .header-empty {
+        width: 180px;
+    }
+
+    .table-spanned-col {
+        width: 180px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .ia-program-area {
+        padding: 40px 0px;
+    }
+
+    .program-table-header {
+        flex-direction: column;
+    }
+
+    .header-duration {
+        display: none;
+    }
+
+    .header-empty {
+        display: none;
+    }
+
+    .header-program {
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .table-main-wrapper {
+        flex-direction: column;
+    }
+
+    .table-row {
+        flex-direction: column;
+    }
+
+    .row-duration {
+        width: 100%;
+        min-height: auto;
+        padding: 10px !important;
+    }
+
+    .row-duration .writing-vertical {
+        writing-mode: horizontal-tb;
+        transform: none;
+    }
+
+    .row-content {
+        border-left: none;
+        padding: 20px !important;
+    }
+
+    .table-spanned-col {
+        width: 100%;
+        border-left: none;
+        border-top: 1px solid #e5e7eb;
+        padding: 30px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .hidden-md-down {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    .inner-container {
+        width: 100%;
+        max-width: 1000px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .table-spanned-col {
+        width: 180px;
+    }
+
+    .header-program {
+        font-size: 16px;
+    }
+
+    .module-list {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ia-program-area {
+        padding: 40px 0;
+    }
+
+    .inner-container {
+        width: 100%;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .section-title {
+        margin-bottom: 25px;
+        padding: 0 15px;
+    }
+
+    .title {
+        font-size: 22px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    /* Header */
+    .program-table-header {
+        display: block !important;
+    }
+
+    .header-duration,
+    .hidden-md-down,
+    .header-empty {
+        display: none !important;
+    }
+
+    .header-program {
+        width: 100%;
+        padding: 15px 12px !important;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* Stack right column below rows */
+    .table-main-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .table-rows-container {
+        width: 100%;
+    }
+
+    /*
+      Keep Duration + Content side by side.
+      This looks more like a table than stacking
+      the duration above every row.
+    */
+    .table-row {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .row-duration {
+        width: 55px;
+        min-width: 55px;
+        min-height: 150px;
+        padding: 10px 5px !important;
+    }
+
+    .row-duration .writing-vertical {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
+        font-size: 12px;
+    }
+
+    .row-content {
+        width: calc(100% - 55px);
+        padding: 16px 12px !important;
+        border-left: 1px solid #e5e7eb;
+    }
+
+    /* Force Bootstrap columns to stack */
+    .row-content .row {
+        margin: 0;
+    }
+
+    .row-content .col-md-6 {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .row-content .col-md-6:last-child {
+        margin-bottom: 0;
+    }
+
+    .module-list {
+        font-size: 14px;
+    }
+
+    .module-list li {
+        line-height: 1.5;
+    }
+
+    .bullet-point {
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+
+    /* British Council section */
+    .table-spanned-col {
+        width: 100%;
+        min-height: auto;
+        padding: 25px 15px !important;
+        border-left: none !important;
+        border-top: 2px solid #888 !important;
+    }
+
+    .british-council,
+    .english-work {
+        font-size: 15px;
+    }
+
+    .weeks-info {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 400px) {
+    .inner-container {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .title {
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    .header-program {
+        font-size: 13px;
+        padding: 12px 8px !important;
+    }
+
+    .row-duration {
+        width: 45px;
+        min-width: 45px;
+    }
+
+    .row-content {
+        width: calc(100% - 45px);
+        padding: 14px 10px !important;
+    }
+
+    .module-list {
+        font-size: 13px;
+    }
+
+    .row-duration .writing-vertical {
+        font-size: 11px;
+    }
+
+    .table-spanned-col {
+        padding: 20px 10px !important;
+    }
+}
+
+
+/* --- Responsive styles from components/EAs/EAAccaProgram.vue --- */
+@media (max-width: 991px) {
+    .ea-title {
+        font-size: 28px;
+    }
+
+    .ea-subtitle {
+        font-size: 30px;
+    }
+
+    .ea-description {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ea-intro-area {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+     
+    .ea-title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .ea-subtitle {
+        font-size: 24px;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .ea-description {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+}
+
+
+/* --- Responsive styles from components/EAs/EAaccQualification.vue --- */
+@media (max-width: 991px) {
+    .exam-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .ptb-100 {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .exam-group {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .group-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .exam-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exam-card {
+        min-height: auto;
+    }
+}
+
+
+/* --- Responsive styles from components/EAs/EATimeLine.vue --- */
+@media (max-width: 767px) {
+    .timeline-card {
+        padding: 28px 16px 24px;
+    }
+
+    .timeline-heading {
+        font-size: 16px;
+    }
+
+    .timeline-row {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .row-left {
+        flex: unset;
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .row-right {
+        width: 100%;
+        border-radius: 0;
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-section {
+        padding: 48px 0;
+    }
+
+    .timeline-heading {
+        font-size: 14px;
+    }
+
+    .row-label {
+        font-size: 11px;
+    }
+
+    .row-right {
+        font-size: 12.5px;
+    }
+}
+
+
+/* --- Responsive styles from components/EAs/EABooks.vue --- */
+@media (max-width: 991px) {
+    .book-image-wrapper {
+        min-height: 280px;
+        padding: 20px;
+    }
+    
+    .book-image-wrapper img {
+        max-height: 220px;
+    }
+
+    .book-title {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .teee-area {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .step-card {
+        padding: 30px 20px;
+    }
+
+    .step-title {
+        font-size: 20px;
+    }
+
+    .book-image-wrapper {
+        min-height: 260px;
+        padding: 15px;
+    }
+
+    .book-image-wrapper img {
+        max-height: 200px;
+    }
+}
+
+
+/* --- Responsive styles from components/Programs/LmsProgram.vue --- */
+@media (max-width: 991px) {
+    .section-container {
+        padding: 40px 20px;
+    }
+
+    .main-title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 575px) {
+    .lms-features-area {
+        padding: 40px 0px;
+    }
+
+    .title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .section-container {
+        padding: 0px !important;
+    }
+
+    .section-title {
+        margin-bottom: 30px;
+    }
+
+    .feature-card {
+        padding: 20px 15px;
+    }
+}
+
+
+/* --- Responsive styles from components/Layout/MainFooter.vue --- */
+@media (max-width: 991px) {
+  .footer-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .apply-now-li {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 991px) {
+  .address-item {
+    margin-bottom: 30px;
+  }
+}
+
+
+/* --- Responsive styles from components/Common/DossierModal.vue --- */
+@media (max-width: 576px) {
+    .celebration-content {
+        padding: 44px 22px 28px;
+    }
+
+    .celebration-title {
+        font-size: 1.5rem;
+    }
+
+    .celebration-emoji {
+        font-size: 52px;
+    }
+}
+
+@media (min-width: 576px) {
+    .modal-dialog {
+        max-width: 650px;
+    }
+}
+
+@media (min-width: 768px) {
+    .custom-input {
+        padding: 12px 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        border-radius: 20px;
+    }
+
+    .modal-body {
+        padding: 35px 20px 25px !important;
+    }
+
+    .modal-title {
+        font-size: 24px;
+        line-height: 1.1;
+    }
+
+    .btn-close {
+        padding: 0.5rem;
+        margin: 0.5rem !important;
+    }
+
+    .btn-register {
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+        font-size: 14px;
+    }
+}
