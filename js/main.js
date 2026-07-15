@@ -803,10 +803,11 @@ document.addEventListener("DOMContentLoaded", function () {
                             reffered_by: referredBy,
                             form_type: 2,
                             form_id: formId,
-                            action: 'pay_now_clicked',
+                            action: 'pay_now',
                             utm_source: utmSource,
                             utm_medium: utmMedium,
                             utm_campaign: utmCampaign,
+                            source:18,
                             ...getTrackingParams()
                         })
                     }).catch(() => { });
@@ -998,7 +999,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             reffered_by: refferedBy,
                             form_type: 2,
                             form_id: formId,
-                            action: 'pay_now_clicked',
+                            action: 'pay_now',
+                            source: 1,
                             utm_source: utmSource,
                             utm_medium: utmMedium,
                             utm_campaign: utmCampaign,
@@ -1028,7 +1030,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                 state: state,
                                 form_type: 2,
                                 form_id: formId,
-                                source: 18
+                                source: 1
                             })
                         });
                         const startData = await startRes.json();
