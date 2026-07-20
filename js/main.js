@@ -184,6 +184,10 @@ document.addEventListener("DOMContentLoaded", function () {
             modalEl.querySelector('.status-message').textContent = message || 'Processing your request...';
         } else if (status === 'success') {
             modalEl.querySelector('.txn-id').textContent = paymentId;
+            const msgEl = modalEl.querySelector('.status-success .text-muted');
+            if (msgEl) {
+                msgEl.textContent = message || 'Your payment has been processed successfully.';
+            }
         }
 
         const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
@@ -232,7 +236,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Auto registration and login after payment success
     async function postPaymentSuccess(cfOrderId, formDetails, formElement, verifyData) {
-        openStatusModal('success', 'Payment successful!', cfOrderId);
         if (formElement) {
             formElement.reset();
             formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
@@ -243,6 +246,48 @@ document.addEventListener("DOMContentLoaded", function () {
                 el.style.display = 'none';
                 el.textContent = '';
             });
+        }
+
+        // Call createStudentAccount after payment is successful
+        await createStudentAccount(cfOrderId, formDetails);
+    }
+
+    async function createStudentAccount(pid = 'DIRECT_CCS', formDetails) {
+        console.log("Creating student account with pid:", pid, "and details:", formDetails);
+        openStatusModal('processing', 'Creating your account...');
+        try {
+            const studentRes = await fetch(`${API_BASE}/api/users/create_student/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    "full_name": formDetails.name,
+                    "email": formDetails.email,
+                    "city": formDetails.city,
+                    "state": formDetails.state,
+                    "country": "India",
+                    "phone1": formDetails.phone,
+                    "referred_code": formDetails.referral_code || formDetails.referredBy || ""
+                }),
+            }).then(res => res.json());
+
+            console.log("createStudentAccount response:", studentRes);
+
+            if (pid === 'REFERRAL_CODE') {
+                // Referral code: do nothing
+            } else {
+                openStatusModal('success', 'Registration Successful! Redirecting to profile...', pid);
+                setTimeout(() => {
+                }, 3000);
+            }
+        } catch (err) {
+            console.error("[DIRECT_CREATE] Error:", err);
+            if (pid === 'REFERRAL_CODE') {
+                // Referral code: do nothing
+            } else {
+                openStatusModal('success', 'Registration Successful! Redirecting to profile...', pid);
+                setTimeout(() => {
+                }, 3000);
+            }
         }
     }
 
