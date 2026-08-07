@@ -232,17 +232,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Auto registration and login after payment success
     async function postPaymentSuccess(cfOrderId, formDetails, formElement, verifyData) {
-        openStatusModal('success', 'Payment successful!', cfOrderId);
-        if (formElement) {
-            formElement.reset();
-            formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
-                el.classList.remove('is-invalid', 'referral-verified');
-                el.readOnly = false;
+        console.log("[PAYMENT_SUCCESS] Initialization for order:", cfOrderId);
+        openStatusModal('processing', 'Creating your account...');
+        try {
+            console.log("[PAYMENT_SUCCESS] Creating student account for:", formDetails.email);
+            const studentRes = await fetch(`${API_BASE}/api/users/create_student/`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    "full_name": formDetails.name,
+                    "email": formDetails.email,
+                    "city": formDetails.city,
+                    "state": formDetails.state,
+                    "country": "India",
+                    "phone1": formDetails.phone,
+                    "referred_code": formDetails.referredBy || ""
+                })
             });
-            formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
-                el.style.display = 'none';
-                el.textContent = '';
-            });
+
+            const studentResData = await studentRes.json();
+            console.log("[PAYMENT_SUCCESS] Student creation response:", studentResData);
+
+            if (formElement) {
+                formElement.reset();
+                formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
+                    el.classList.remove('is-invalid', 'referral-verified');
+                    el.readOnly = false;
+                });
+                formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
+                    el.style.display = 'none';
+                    el.textContent = '';
+                });
+            }
+
+            if (studentResData.success && studentResData.data?.password) {
+                console.log("[PAYMENT_SUCCESS] Password received, triggering autoLogin");
+                await autoLogin(formDetails.email, studentResData.data.password, cfOrderId);
+            } else {
+                console.warn("[PAYMENT_SUCCESS] Student creation failed or no password returned. Redirecting to account page.");
+                if (cfOrderId === 'REFERRAL_CODE') {
+                    // Referral code: do nothing
+                } else if (cfOrderId !== 'DIRECT_CREATE_CCS') {
+                    openStatusModal('success', 'Payment Successful! Redirecting to profile...', cfOrderId);
+                    const msgEl = document.querySelector('.status-success .text-muted');
+                    if (msgEl) msgEl.textContent = 'Payment Successful! Redirecting to profile...';
+                } else {
+                    await closeStatusModal();
+                }
+            }
+        } catch (regErr) {
+            console.error("[PAYMENT_SUCCESS] Registration error after payment:", regErr);
+            if (formElement) {
+                formElement.reset();
+                formElement.querySelectorAll('.is-invalid, .referral-verified').forEach(el => {
+                    el.classList.remove('is-invalid', 'referral-verified');
+                    el.readOnly = false;
+                });
+                formElement.querySelectorAll('.invalid-feedback, .text-danger').forEach(el => {
+                    el.style.display = 'none';
+                    el.textContent = '';
+                });
+            }
+            if (cfOrderId === 'REFERRAL_CODE') {
+                // Referral code: do nothing
+            } else if (cfOrderId !== 'DIRECT_CREATE_CCS') {
+                openStatusModal('success', 'Payment Successful! Redirecting to profile...', cfOrderId);
+                const msgEl = document.querySelector('.status-success .text-muted');
+                if (msgEl) msgEl.textContent = 'Payment Successful! Redirecting to profile...';
+            } else {
+                await closeStatusModal();
+            }
         }
     }
 
