@@ -523,8 +523,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             state: state,
                             form_type: 2,
                             form_id: formId,
-                            source: 18,
-                            commingAmount:2950
+                            source: 18
                         })
                     });
                     const startData = await startRes.json();
