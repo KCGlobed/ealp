@@ -1,13 +1,13 @@
-var BASE_URL = "https://kcglobed-gcc-website-932479078084.asia-south1.run.app";
+var BASE_URL = "https://gccschool.com";
 var GCC_BACKEND_URL = "https://gccwebsite-admin-backend-738131651355.asia-south1.run.app";
 var mode = "sandbox";
 
 if (window.location.hostname.includes("gccschool.com")) {
-    BASE_URL = "https://gcc-website-prod-932479078084.europe-west1.run.app";
+    BASE_URL = "https://gccschool.com";
     GCC_BACKEND_URL = "https://gccwebsite-admin-prod-backend-738131651355.asia-south1.run.app";
     mode = "production";
 } else if (window.location.hostname.includes("localhost")) {
-    BASE_URL = "https://kcglobed-gcc-website-932479078084.asia-south1.run.app";
+    BASE_URL = "https://gccschool.com";
     GCC_BACKEND_URL = "https://gccwebsite-admin-backend-738131651355.asia-south1.run.app";
     mode = "sandbox";
 }
@@ -523,8 +523,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             state: state,
                             form_type: 2,
                             form_id: formId,
-                            source: 18,
-                            commingAmount:2950
+                            source: 18
                         })
                     });
                     const startData = await startRes.json();
