@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             utm_source: utmSource,
                             utm_medium: utmMedium,
                             utm_campaign: utmCampaign,
-                            source:18,
+                            source: 18,
                             ...getTrackingParams()
                         })
                     }).catch(() => { });
