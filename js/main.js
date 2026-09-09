@@ -1,14 +1,14 @@
 var BASE_URL = "https://gccschool.com";
-var GCC_BACKEND_URL = "https://gccwebsite-admin-backend-738131651355.asia-south1.run.app";
+var GCC_BACKEND_URL = "https://gcc-backend-dev.gccschool.com";
 var mode = "sandbox";
 
 if (window.location.hostname.includes("gccschool.com")) {
     BASE_URL = "https://gccschool.com";
-    GCC_BACKEND_URL = "https://gccwebsite-admin-prod-backend-738131651355.asia-south1.run.app";
+    GCC_BACKEND_URL = "https://gcc-backend-prod.gccschool.com";
     mode = "production";
 } else if (window.location.hostname.includes("localhost")) {
     BASE_URL = "https://gccschool.com";
-    GCC_BACKEND_URL = "https://gccwebsite-admin-backend-738131651355.asia-south1.run.app";
+    GCC_BACKEND_URL = "https://gcc-backend-dev.gccschool.com";
     mode = "sandbox";
 }
 
